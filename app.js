@@ -11,7 +11,7 @@ const signup = require("./routers/signup.js");
 const logout = require("./routers/logout.js");
 //core config
 const optioncors = {
-  origin: "https://adchaa.github.io/task-manager-prod/",
+  origin: "https://adchaa.github.io/",
   credentials: true,
   optionsSuccessStatus: 200,
 };
