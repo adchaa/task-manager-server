@@ -1,3 +1,4 @@
+const port = process.env.PORT || 3050;
 //imports
 const express = require("express");
 const app = express();
@@ -49,6 +50,6 @@ app.use("/logout", logout);
 app.get("/", (req, res) => {
   return res.status(200).message("good");
 });
-app.listen(3050, () => {
-  console.log("server started at port 3050");
+app.listen(port, () => {
+  console.log("server started at port " + port);
 });
