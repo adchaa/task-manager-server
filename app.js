@@ -46,7 +46,9 @@ app.use("/login", log);
 app.use("/task", task);
 app.use("/signup", signup);
 app.use("/logout", logout);
-
+app.get("/", (req, res) => {
+  return res.status(200).message("good");
+});
 app.listen(3050, () => {
   console.log("server started at port 3050");
 });
