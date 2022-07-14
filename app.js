@@ -10,7 +10,27 @@ const task = require("./routers/task");
 const signup = require("./routers/signup.js");
 const logout = require("./routers/logout.js");
 //core config
+const whitelist = ["https://adchaa.github.io"]
 
+const corsOptions = {
+
+  origin: function (origin, callback) {
+
+    if (!origin || whitelist.indexOf(origin) !== -1) {
+
+      callback(null, true)
+
+    } else {
+
+      callback(new Error("Not allowed by CORS"))
+
+    }
+
+  },
+
+  credentials: true,
+
+}
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 // session config
