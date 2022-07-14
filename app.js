@@ -10,11 +10,8 @@ const task = require("./routers/task");
 const signup = require("./routers/signup.js");
 const logout = require("./routers/logout.js");
 //core config
-const optioncors = {
-  origin: "*",
-  credentials: true,
-};
-app.use(cors(optioncors));
+
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 // session config
 app.use(
