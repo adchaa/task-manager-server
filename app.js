@@ -11,7 +11,7 @@ const signup = require("./routers/signup.js");
 const logout = require("./routers/logout.js");
 //core config
 const optioncors = {
-  origin: "https://adchaa.github.io",
+  origin: "*",
   credentials: true,
 };
 app.use(cors(optioncors));
